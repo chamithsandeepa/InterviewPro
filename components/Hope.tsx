@@ -57,9 +57,14 @@ export default function Hope() {
               </div>
             </div>
 
-            <button className="mt-10 rounded-md border border-gray-300 px-6 py-3 text-sm font-medium text-black hover:bg-black hover:text-white transition">
+            <a
+              href="https://wa.me/94711186028"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-10 inline-block rounded-md border border-gray-300 px-6 py-3 text-sm font-medium text-black hover:bg-black hover:text-white transition"
+            >
               Send CV &amp; Get Feedback
-            </button>
+            </a>
           </div>
         </div>
 

@@ -3,7 +3,7 @@ import { Users, ArrowLeftRight, MoveHorizontal, Speech } from "lucide-react";
 
 export default function Benefits() {
   return (
-    <section className="bg-white py-24 font-inter">
+    <section id="benefits" className="bg-white py-24 font-inter">
       <div className="mx-auto max-w-7xl px-6">
         {/* HEADER */}
         <div className="text-center max-w-2xl mx-auto">

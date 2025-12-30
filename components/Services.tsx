@@ -6,7 +6,9 @@ export default function Services() {
       <div className="mx-auto max-w-7xl px-6">
         {/* Section Header */}
         <div className="text-center">
-          <span className="text-sm font-semibold text-[#0C0801]">Our Services</span>
+          <span className="text-sm font-semibold text-[#0C0801]">
+            Our Services
+          </span>
 
           <h2
             className="mt-3 text-[32px] font-semibold lg:text-[44px]"

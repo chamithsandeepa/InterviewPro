@@ -14,9 +14,12 @@ export default function CTA() {
 
         {/* Button */}
         <div className="mt-10">
-          <button className="rounded-md bg-[#8E81FC] px-8 py-3 text-sm font-medium text-white hover:bg-[#7A6CF5] transition">
+          <a
+            href="tel:+94711186028"
+            className="rounded-md bg-[#8E81FC] px-8 py-3 text-sm font-medium text-white hover:bg-[#7A6CF5] transition"
+          >
             Contact Us
-          </button>
+          </a>
         </div>
       </div>
     </section>

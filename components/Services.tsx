@@ -46,7 +46,7 @@ export default function Services() {
               </p>
 
               <a
-                href="https://wa.me/94711186028"
+                href="https://wa.me/94701134650"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="mt-6 inline-block rounded-lg border px-5 py-2 text-sm font-medium"
@@ -88,7 +88,7 @@ export default function Services() {
               </p>
 
               <a
-                href="https://wa.me/94711186028"
+                href="https://wa.me/94701134650"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="mt-6 inline-block rounded-lg border px-5 py-2 text-sm font-medium"

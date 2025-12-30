@@ -21,7 +21,7 @@ export default function Hero() {
 
           <div className="mt-8 flex flex-wrap gap-4">
             <a
-              href="https://wa.me/94711186028"
+              href="https://wa.me/94701134650"
               target="_blank"
               rel="noopener noreferrer"
               className="rounded-lg bg-[#8E81FC] px-6 py-3 text-white text-sm font-medium"
@@ -30,7 +30,7 @@ export default function Hero() {
             </a>
 
             <a
-              href="https://wa.me/94711186028"
+              href="https://wa.me/94701134650"
               target="_blank"
               rel="noopener noreferrer"
               className="rounded-lg border border-[#8E81FC] px-6 py-3 text-[#8E81FC] text-sm font-medium"

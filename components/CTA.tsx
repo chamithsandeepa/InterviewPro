@@ -15,7 +15,7 @@ export default function CTA() {
         {/* Button */}
         <div className="mt-10">
           <a
-            href="tel:+94711186028"
+            href="tel:+94701134650"
             className="rounded-md bg-[#8E81FC] px-8 py-3 text-sm font-medium text-white hover:bg-[#7A6CF5] transition"
           >
             Contact Us

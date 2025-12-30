@@ -45,9 +45,14 @@ export default function Services() {
                 stand out to recruiters.
               </p>
 
-              <button className="mt-6 rounded-lg border px-5 py-2 text-sm font-medium">
+              <a
+                href="https://wa.me/94711186028"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-6 inline-block rounded-lg border px-5 py-2 text-sm font-medium"
+              >
                 Get Free CV Feedback
-              </button>
+              </a>
             </div>
 
             <Image
@@ -82,9 +87,14 @@ export default function Services() {
                 confidence for your actual interviews.
               </p>
 
-              <button className="mt-6 rounded-lg border px-5 py-2 text-sm font-medium">
+              <a
+                href="https://wa.me/94711186028"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-6 inline-block rounded-lg border px-5 py-2 text-sm font-medium"
+              >
                 Request Mock Interview
-              </button>
+              </a>
             </div>
 
             <Image

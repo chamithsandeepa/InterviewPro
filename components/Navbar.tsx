@@ -45,7 +45,7 @@ export default function Navbar() {
 
           {/* CTA */}
           <Link
-            href="#contact"
+            href="tel:+94711186028"
             className="hidden lg:block rounded-lg bg-[#8E81FC] px-5 py-2 text-white text-sm"
           >
             Call Now

@@ -2,7 +2,7 @@ import { FileText, MessageCircle, Laptop, MessagesSquare } from "lucide-react";
 
 export default function Process() {
   return (
-    <section className="bg-[#FAFDF7] py-24">
+    <section id="process" className="bg-[#FAFDF7] py-24">
       <div className="mx-auto max-w-7xl px-6">
         {/* Header */}
         <div className="text-center">

@@ -20,13 +20,23 @@ export default function Hero() {
           </p>
 
           <div className="mt-8 flex flex-wrap gap-4">
-            <button className="rounded-lg bg-[#8E81FC] px-6 py-3 text-white text-sm font-medium">
+            <a
+              href="https://wa.me/94711186028"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="rounded-lg bg-[#8E81FC] px-6 py-3 text-white text-sm font-medium"
+            >
               Send CV on WhatsApp
-            </button>
+            </a>
 
-            <button className="rounded-lg border border-[#8E81FC] px-6 py-3 text-[#8E81FC] text-sm font-medium">
+            <a
+              href="https://wa.me/94711186028"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="rounded-lg border border-[#8E81FC] px-6 py-3 text-[#8E81FC] text-sm font-medium"
+            >
               Request Mock Interview
-            </button>
+            </a>
           </div>
         </div>
 

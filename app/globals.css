@@ -10,3 +10,12 @@ body {
   background-color: #fafcf6;
   color: #111827;
 }
+
+/* Utility font classes */
+.font-sora {
+  font-family: var(--font-sora);
+}
+
+.font-poppins {
+  font-family: var(--font-poppins);
+}

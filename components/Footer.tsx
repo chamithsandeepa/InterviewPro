@@ -1,12 +1,9 @@
 "use client";
 
-import Link from "next/link";
+import { motion } from "motion/react";
 import { Phone, Mail, Globe, Facebook, Linkedin } from "lucide-react";
 
-const NAV_HEIGHT = 80; // same as navbar
-
 export default function Footer() {
-  // Links for smooth scroll
   const links = [
     { label: "Home", href: "#home" },
     { label: "Our Services", href: "#services" },
@@ -18,11 +15,16 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="bg-white border-t border-gray-200 py-20">
+    <footer className="bg-white border-t border-gray-200 py-20 overflow-hidden">
       <div className="mx-auto max-w-7xl px-6">
         <div className="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-4">
-          {/* Column 1 - Logo & Description */}
-          <div>
+          {/* Column 1 */}
+          <motion.div
+            initial={{ opacity: 0, y: 24 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+          >
             <h2
               className="text-2xl font-semibold text-black"
               style={{ fontFamily: "var(--font-poppins)" }}
@@ -33,10 +35,16 @@ export default function Footer() {
             <p className="mt-4 text-sm text-gray-700">
               Practice your interview with real career experts
             </p>
-          </div>
+          </motion.div>
 
-          {/* Column 2 - Contact Info */}
-          <div className="space-y-4">
+          {/* Column 2 */}
+          <motion.div
+            className="space-y-4"
+            initial={{ opacity: 0, y: 24 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.25 }}
+          >
             <div className="flex items-center gap-3">
               <Phone className="h-5 w-5 text-black" />
               <a
@@ -68,10 +76,16 @@ export default function Footer() {
                 www.cenzios.com
               </a>
             </div>
-          </div>
+          </motion.div>
 
-          {/* Column 3 - Navigation */}
-          <nav className="space-y-3">
+          {/* Column 3 */}
+          <motion.nav
+            className="space-y-3"
+            initial={{ opacity: 0, y: 24 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+          >
             {links.map((link) => (
               <a
                 key={link.label}
@@ -81,38 +95,52 @@ export default function Footer() {
                 {link.label}
               </a>
             ))}
-          </nav>
+          </motion.nav>
 
-          {/* Column 4 - Social Media */}
-          <div className="flex lg:justify-end">
+          {/* Column 4 */}
+          <motion.div
+            className="flex lg:justify-end"
+            initial={{ opacity: 0, y: 24 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.55 }}
+          >
             <div className="flex gap-4">
-              <a
+              <motion.a
                 href="https://facebook.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="Facebook"
+                whileHover={{ scale: 1.15, y: -2 }}
+                whileTap={{ scale: 0.95 }}
               >
-                <Facebook className="h-6 w-6 text-black hover:text-gray-600 transition" />
-              </a>
+                <Facebook className="h-6 w-6 text-black" />
+              </motion.a>
 
-              <a
+              <motion.a
                 href="https://linkedin.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="LinkedIn"
+                whileHover={{ scale: 1.15, y: -2 }}
+                whileTap={{ scale: 0.95 }}
               >
-                <Linkedin className="h-6 w-6 text-black hover:text-gray-600 transition" />
-              </a>
+                <Linkedin className="h-6 w-6 text-black" />
+              </motion.a>
             </div>
-          </div>
+          </motion.div>
         </div>
 
         {/* Bottom Copyright */}
-        <div className="mt-16 pt-8 border-t border-gray-200">
+        <motion.div
+          className="mt-16 pt-8 border-t border-gray-200"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.7 }}
+        >
           <p className="text-sm text-gray-600 text-center md:text-left">
             © 2025 Cenzios. All rights reserved.
           </p>
-        </div>
+        </motion.div>
       </div>
     </footer>
   );

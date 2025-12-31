@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { Menu, X } from "lucide-react";
+import { motion } from "motion/react";
 
 const NAV_HEIGHT = 80;
 
@@ -27,29 +28,33 @@ export default function Navbar() {
       >
         <div className="mx-auto max-w-7xl px-6 h-full flex items-center justify-between font-inter">
           <Link href="#home">
-            <h1 className="text-xl font-semibold">INTERVIEW</h1>
+            <h1 className="text-xl font-semibold cursor-pointer">INTERVIEW</h1>
           </Link>
 
           {/* Desktop */}
           <nav className="hidden lg:flex gap-8 font-medium">
             {links.map((link) => (
-              <Link
+              <motion.div
                 key={link.href}
-                href={link.href}
-                className="hover:text-[#8E81FC]"
+                whileHover={{ scale: 1.1, y: -2 }}
+                whileTap={{ scale: 0.95 }}
               >
-                {link.label}
-              </Link>
+                <Link href={link.href} className="hover:text-[#8E81FC]">
+                  {link.label}
+                </Link>
+              </motion.div>
             ))}
           </nav>
 
           {/* CTA */}
-          <Link
-            href="tel:+94701134650"
-            className="hidden lg:block rounded-lg bg-[#8E81FC] px-5 py-2 text-white text-sm"
-          >
-            Call Now
-          </Link>
+          <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+            <Link
+              href="tel:+94701134650"
+              className="hidden lg:block rounded-lg bg-[#8E81FC] px-5 py-2 text-white text-sm"
+            >
+              Call Now
+            </Link>
+          </motion.div>
 
           {/* Mobile toggle */}
           <button className="lg:hidden" onClick={() => setOpen(!open)}>
@@ -59,18 +64,30 @@ export default function Navbar() {
 
         {/* Mobile menu */}
         {open && (
-          <div className="lg:hidden bg-white border-t px-6 py-6 space-y-5">
-            {links.map((link) => (
-              <Link
+          <motion.div
+            className="lg:hidden bg-white border-t px-6 py-6 space-y-5"
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            transition={{ duration: 0.4 }}
+          >
+            {links.map((link, index) => (
+              <motion.div
                 key={link.href}
-                href={link.href}
-                onClick={() => setOpen(false)}
-                className="block font-medium"
+                initial={{ opacity: 0, x: -10 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ delay: index * 0.05, duration: 0.3 }}
               >
-                {link.label}
-              </Link>
+                <Link
+                  href={link.href}
+                  onClick={() => setOpen(false)}
+                  className="block font-medium"
+                >
+                  {link.label}
+                </Link>
+              </motion.div>
             ))}
-          </div>
+          </motion.div>
         )}
       </header>
 

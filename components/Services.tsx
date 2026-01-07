@@ -26,14 +26,14 @@ export default function Services() {
       >
         {/* Section Header */}
         <motion.div
-          className="text-center"
+          className="text-center mb-16"
           variants={{
             hidden: { opacity: 0, y: 20 },
             visible: { opacity: 1, y: 0 },
           }}
         >
           <motion.span
-            className="text-sm font-semibold text-[#0C0801]"
+            className="text-sm font-bold text-[#0C0801]"
             variants={{
               hidden: { opacity: 0, y: 10 },
               visible: { opacity: 1, y: 0 },
@@ -43,7 +43,7 @@ export default function Services() {
           </motion.span>
 
           <motion.h2
-            className="mt-3 text-[32px] font-semibold lg:text-[44px]"
+            className="mt-3 text-[32px] font-sora font-bold lg:text-[44px] text-black"
             style={{ fontFamily: "var(--font-sora)" }}
             variants={{
               hidden: { opacity: 0, y: 16 },
@@ -65,119 +65,93 @@ export default function Services() {
         </motion.div>
 
         {/* Cards */}
-        <div className="mt-16 grid grid-cols-1 gap-10 lg:grid-cols-2">
-          {/* LEFT CARD */}
+        <div className="grid grid-cols-1 gap-10 lg:grid-cols-2">
+          {/* LEFT CARD - Free CV Review */}
           <motion.div
-            className="overflow-hidden rounded-2xl border bg-white"
+            className="overflow-hidden rounded-3xl bg-white border h-full flex flex-col"
+            style={{
+              borderColor: "#FFBD43",
+              boxShadow: "0 4px 25px rgba(255, 189, 67, 0.4)",
+            }}
             variants={{
               hidden: { opacity: 0, x: -40 },
               visible: { opacity: 1, x: 0 },
             }}
             transition={{ duration: 0.7, ease: "easeOut" }}
+            whileHover={{
+              y: -8,
+              boxShadow: "0 10px 40px rgba(255, 189, 67, 0.6)",
+            }}
           >
-            <div className="p-8">
-              <span className="text-sm font-medium text-gray-500">Review</span>
-
-              <h3
-                className="mt-2 text-[32px] font-semibold"
-                style={{ fontFamily: "var(--font-sora)" }}
-              >
-                <span className="text-[#FFBD43]">Free</span> <br /> CV review
-              </h3>
-
-              <p className="mt-4 text-[#0C0801]">
-                Upload your CV and receive personalized feedback at no cost.
-                This service is designed for students, internship seekers, and
-                fresh graduates who want to improve their CV before applying for
-                jobs or internships. You can easily submit your CV via WhatsApp,
-                and our team will guide you with practical tips to make your CV
-                stand out to recruiters.
-              </p>
-
-              <motion.a
-                href="https://wa.me/94701134650"
-                target="_blank"
-                rel="noopener noreferrer"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="mt-6 inline-block rounded-lg border px-5 py-2 text-sm font-medium"
-              >
-                Get Free CV Feedback
-              </motion.a>
+            <div className="relative w-full p-4 pb-0">
+              <div className="relative overflow-hidden rounded-2xl w-full h-75 lg:h-87.5">
+                <Image
+                  src="/service1.png"
+                  alt="CV Review"
+                  fill
+                  className="object-cover"
+                />
+              </div>
             </div>
 
-            <motion.div
-              initial={{ scale: 1.05, opacity: 0 }}
-              whileInView={{ scale: 1, opacity: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.7, ease: "easeOut" }}
-            >
-              <Image
-                src="/service1.png"
-                alt="CV Review"
-                width={600}
-                height={380}
-                className="w-full object-cover"
-              />
-            </motion.div>
+            <div className="p-8 pt-6 grow flex flex-col">
+              <h3
+                className="text-[28px] font-bold text-black"
+                style={{ fontFamily: "var(--font-sora)" }}
+              >
+                <span className="text-[#FFBD43]">Free</span> CV review
+              </h3>
+
+              <p className="mt-4 text-[#0C0801] leading-relaxed">
+                Upload your CV via WhatsApp and get personalized feedback
+                completely free. Ideal for students and fresh graduates
+                preparing for job or internship applications.
+              </p>
+            </div>
           </motion.div>
 
-          {/* RIGHT CARD */}
+          {/* RIGHT CARD - Mock Interviews */}
           <motion.div
-            className="overflow-hidden rounded-2xl border bg-white"
+            className="overflow-hidden rounded-3xl bg-white border h-full flex flex-col"
+            style={{
+              borderColor: "#917FFE",
+              boxShadow: "0 4px 25px rgba(145, 127, 254, 0.4)",
+            }}
             variants={{
               hidden: { opacity: 0, x: 40 },
               visible: { opacity: 1, x: 0 },
             }}
             transition={{ duration: 0.7, ease: "easeOut" }}
+            whileHover={{
+              y: -8,
+              boxShadow: "0 10px 40px rgba(145, 127, 254, 0.6)",
+            }}
           >
-            <div className="p-8">
-              <span className="text-sm font-medium text-gray-500">
-                Interviews
-              </span>
-
-              <h3
-                className="mt-2 text-[32px] font-semibold"
-                style={{ fontFamily: "var(--font-sora)" }}
-              >
-                Mock interviews with <br /> experts
-              </h3>
-
-              <p className="mt-4 text-[#0C0801]">
-                Take the next step toward your dream job or internship by
-                requesting a one-on-one mock interview with an experienced
-                professional. Our team will help you schedule via WhatsApp,
-                guide you through the process and payment details, and provide
-                expert feedback so you can practice real questions and build
-                confidence for your actual interviews.
-              </p>
-
-              <motion.a
-                href="https://wa.me/94701134650"
-                target="_blank"
-                rel="noopener noreferrer"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="mt-6 inline-block rounded-lg border px-5 py-2 text-sm font-medium"
-              >
-                Request Mock Interview
-              </motion.a>
+            <div className="relative w-full p-4 pb-0">
+              <div className="relative overflow-hidden rounded-2xl w-full h-75 lg:h-87.5">
+                <Image
+                  src="/service2.png"
+                  alt="Mock Interview"
+                  fill
+                  className="object-cover"
+                />
+              </div>
             </div>
 
-            <motion.div
-              initial={{ scale: 1.05, opacity: 0 }}
-              whileInView={{ scale: 1, opacity: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.7, ease: "easeOut" }}
-            >
-              <Image
-                src="/service2.png"
-                alt="Mock Interview"
-                width={600}
-                height={380}
-                className="w-full object-cover"
-              />
-            </motion.div>
+            <div className="p-8 pt-6 grow flex flex-col">
+              <h3
+                className="text-[28px] font-bold text-black"
+                style={{ fontFamily: "var(--font-sora)" }}
+              >
+                Mock interviews
+              </h3>
+
+              <p className="mt-4 text-[#0C0801] leading-relaxed">
+                Practice real interview questions with industry experts. Book a
+                one-on-one mock interview via WhatsApp and gain confidence with
+                expert feedback.
+              </p>
+            </div>
           </motion.div>
         </div>
       </motion.div>

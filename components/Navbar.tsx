@@ -4,6 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { Menu, X } from "lucide-react";
 import { motion } from "motion/react";
+import Image from "next/image";
 
 const NAV_HEIGHT = 80;
 
@@ -28,7 +29,13 @@ export default function Navbar() {
       >
         <div className="mx-auto max-w-7xl px-6 h-full flex items-center justify-between font-inter">
           <Link href="#home">
-            <h1 className="text-xl font-semibold cursor-pointer">INTERVIEW</h1>
+            <Image
+              src="/logo.png"
+              alt="InterviewPro Logo"
+              width={180}
+              height={60}
+              className="h-16 w-auto object-contain cursor-pointer"
+            />
           </Link>
 
           {/* Desktop */}

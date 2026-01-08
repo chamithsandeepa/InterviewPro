@@ -6,6 +6,19 @@ import { motion } from "motion/react";
 export default function Hero() {
   return (
     <section id="home" className="relative overflow-hidden bg-[#FAFDF7]">
+      {/* CENTER ARROW */}
+      <motion.div
+        className="pointer-events-none absolute inset-x-0 bottom-40 z-10 flex justify-center"
+        animate={{ y: [0, 10, 0] }}
+        transition={{
+          duration: 3,
+          repeat: Infinity,
+          ease: "easeInOut",
+        }}
+      >
+        <Image src="/arrow.png" alt="Arrow" width={100} height={100} />
+      </motion.div>
+
       <motion.div
         className="mx-auto max-w-7xl px-6 py-20 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center"
         initial="hidden"
@@ -39,19 +52,19 @@ export default function Hero() {
               visible: { opacity: 1, y: 0 },
             }}
           >
-            Practice your <span className="text-[#FFBD43]">interview</span> with
-            real career experts
+            <span className="text-[#FFBD43]">Is Your Degree Enough</span> to Get
+            You Hired?
           </motion.h1>
 
           <motion.p
-            className="mt-6 max-w-lg text-lg text-gray-600"
+            className="mt-6 max-w-lg text-[18px] text-gray-600"
             variants={{
               hidden: { opacity: 0, y: 20 },
               visible: { opacity: 1, y: 0 },
             }}
           >
-            Upload your CV, receive expert guidance, and practice interviews
-            with confidence. You're not alone in this journey.
+            For years, we’ve watched brilliant students fail job interviews, not
+            because they weren't smart, but because they weren't prepared.
           </motion.p>
 
           <motion.div
@@ -69,7 +82,7 @@ export default function Hero() {
               whileTap={{ scale: 0.95 }}
               className="rounded-lg bg-[#8E81FC] px-6 py-3 text-white text-sm font-medium"
             >
-              Send CV on WhatsApp
+              Get a Free CV Review
             </motion.a>
 
             <motion.a
@@ -80,7 +93,7 @@ export default function Hero() {
               whileTap={{ scale: 0.95 }}
               className="rounded-lg border border-[#8E81FC] px-6 py-3 text-[#8E81FC] text-sm font-medium"
             >
-              Request Mock Interview
+              Book a Mock Interview
             </motion.a>
           </motion.div>
         </motion.div>

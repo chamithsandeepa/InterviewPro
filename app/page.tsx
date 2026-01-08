@@ -9,18 +9,17 @@ import Services from "@/components/Services";
 import Team from "@/components/Team";
 import Trust from "@/components/Trust";
 
-
 export default function Home() {
   return (
     <>
       <Navbar />
       <Hero />
+      <Hope />
+      <Benefits />
       <Services />
       <Process />
-      <Benefits />
       <Team />
       <Trust />
-      <Hope />
       <CTA />
       <Footer />
     </>

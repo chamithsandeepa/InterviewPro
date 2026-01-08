@@ -34,7 +34,7 @@ export default function Navbar() {
               alt="InterviewPro Logo"
               width={180}
               height={60}
-              className="h-16 w-auto object-contain cursor-pointer"
+              className="h-10 lg:h-16 w-auto object-contain cursor-pointer"
             />
           </Link>
 

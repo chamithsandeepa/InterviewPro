@@ -75,7 +75,7 @@ export default function Hero() {
             }}
           >
             <motion.a
-              href="https://wa.me/94701134650"
+              href="https://wa.me/94701134650?text=I%20need%20to%20review%20my%20CV"
               target="_blank"
               rel="noopener noreferrer"
               whileHover={{ scale: 1.05 }}

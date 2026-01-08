@@ -18,7 +18,8 @@ export default function Footer() {
   return (
     <footer className="bg-gradient-to-b from-[#FFF0EC] to-[#C8BFFF] py-20 overflow-hidden font-inter">
       <div className="mx-auto max-w-7xl px-6">
-        <div className="grid grid-cols-1 gap-12 lg:grid-cols-4">
+        {/* DESKTOP VIEW */}
+        <div className="hidden lg:grid grid-cols-1 gap-12 lg:grid-cols-4">
           {/* Column 1 - Logo & Description */}
           <motion.div
             initial={{ opacity: 0, y: 24 }}
@@ -128,6 +129,115 @@ export default function Footer() {
             >
               <Linkedin className="h-6 w-6 text-black" fill="currentColor" />
             </motion.a>
+          </motion.div>
+        </div>
+
+        {/* MOBILE VIEW */}
+        <div className="block lg:hidden flex flex-col items-center text-center">
+          {/* Logo & Description */}
+          <motion.div
+             initial={{ opacity: 0, y: 20 }}
+             whileInView={{ opacity: 1, y: 0 }}
+             viewport={{ once: true }}
+             className="mb-8 flex flex-col items-center"
+          >
+            <Image
+              src="/logo.png"
+              alt="InterviewPro Logo"
+              width={200}
+              height={70}
+              className="h-16 w-auto object-contain mb-6"
+            />
+            <p className="text-[17px] font-medium text-[#0C0801] leading-snug px-4">
+              Practice your interview with real career experts
+            </p>
+          </motion.div>
+
+          {/* Navigation Links */}
+          <motion.nav
+             initial={{ opacity: 0, y: 20 }}
+             whileInView={{ opacity: 1, y: 0 }}
+             viewport={{ once: true }}
+             transition={{ delay: 0.1 }}
+             className="flex flex-col gap-4 mb-10"
+          >
+            {links.map((link) => (
+              <a
+                key={link.label}
+                href={link.href}
+                className="text-[15px] font-medium text-[#0C0801]"
+              >
+                {link.label}
+              </a>
+            ))}
+          </motion.nav>
+
+          {/* Contact Info */}
+           <motion.div
+            className="flex flex-col gap-4 items-center mb-10"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.2 }}
+          >
+            <div className="flex items-center gap-3">
+              <Phone className="h-5 w-5 text-black" fill="currentColor" />
+              <a
+                href="tel:+94701134650"
+                className="text-[15px] font-medium text-[#0C0801]"
+              >
+                +94 70 113 4650
+              </a>
+            </div>
+
+            <div className="flex items-center gap-3">
+              <Mail className="h-5 w-5 text-black" fill="currentColor" />
+              <a
+                href="mailto:info@cenzios.com"
+                className="text-[15px] font-medium text-[#0C0801]"
+              >
+                info@cenzios.com
+              </a>
+            </div>
+
+            <div className="flex items-center gap-3">
+              <Globe className="h-5 w-5 text-black" />
+              <a
+                href="https://www.cenzios.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[15px] font-medium text-[#0C0801] underline decoration-1 underline-offset-4"
+              >
+                www.cenzios.com
+              </a>
+            </div>
+          </motion.div>
+
+          {/* Social Icons */}
+          <motion.div
+            className="flex gap-8 justify-center items-center mb-8"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.3 }}
+          >
+            <a
+              href="https://facebook.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-black"
+            >
+              <Facebook className="h-7 w-7" fill="currentColor" />
+            </a>
+
+            <a
+              href="https://linkedin.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-black"
+            >
+              <Linkedin className="h-7 w-7" fill="currentColor" />
+            </a>
           </motion.div>
         </div>
 

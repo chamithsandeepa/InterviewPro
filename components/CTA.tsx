@@ -6,7 +6,7 @@ export default function CTA() {
   return (
     <section
       id="contact"
-      className="bg-[#FAFDF7] py-28 font-inter overflow-hidden"
+      className="bg-linear-to-b from-white to-[#FFF0EC] py-32 font-inter overflow-hidden"
     >
       <motion.div
         className="mx-auto max-w-4xl px-6 text-center"
@@ -17,7 +17,7 @@ export default function CTA() {
       >
         {/* Heading */}
         <motion.h2
-          className="font-sora text-[32px] font-semibold text-black lg:text-[44px]"
+          className="font-sora text-[40px] md:text-[44px] font-bold text-black tracking-tight"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -28,7 +28,7 @@ export default function CTA() {
 
         {/* Subtext */}
         <motion.p
-          className="mt-4 text-gray-700"
+          className="mt-6 text-gray-800 text-sm md:text-lg"
           initial={{ opacity: 0, y: 14 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -47,20 +47,12 @@ export default function CTA() {
         >
           <motion.a
             href="tel:+94701134650"
-            className="rounded-md bg-[#8E81FC] px-8 py-3 text-sm font-medium text-white shadow-md"
+            className="rounded-lg bg-[#3B46F1] px-10 py-4 text-base font-semibold text-white shadow-lg shadow-indigo-200"
             whileHover={{
-              scale: 1.08,
-              boxShadow: "0px 12px 30px rgba(142,129,252,0.45)",
+              scale: 1.05,
+              boxShadow: "0px 15px 35px rgba(59, 70, 241, 0.35)",
             }}
             whileTap={{ scale: 0.95 }}
-            animate={{
-              scale: [1, 1.03, 1],
-            }}
-            transition={{
-              duration: 2.5,
-              repeat: Infinity,
-              ease: "easeInOut",
-            }}
           >
             Contact Us
           </motion.a>

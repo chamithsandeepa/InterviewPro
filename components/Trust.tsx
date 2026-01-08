@@ -5,7 +5,7 @@ import { motion } from "motion/react";
 
 export default function Trust() {
   return (
-    <section id="features" className="bg-white py-24 font-inter">
+    <section id="features" className="bg-[#FAFDF7] py-24 font-inter">
       <motion.div
         className="mx-auto max-w-7xl px-6"
         initial="hidden"

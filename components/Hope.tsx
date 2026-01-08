@@ -55,7 +55,7 @@ export default function Hope() {
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            <p className="text-gray-700 text-lg  leading-relaxed">
+            <p className="text-gray-700 text-[18px]  leading-relaxed">
               Our service builds real interview confidence by connecting
               candidates with verified career experts for practical mock
               interviews, CV feedback, and personalized guidance helping them

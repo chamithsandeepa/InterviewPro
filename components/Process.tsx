@@ -64,8 +64,8 @@ export default function Process() {
           </motion.p>
         </motion.div>
 
-        {/* Steps */}
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
+        {/* DESKTOP VIEW */}
+        <div className="hidden lg:grid grid-cols-1 gap-8 md:grid-cols-3">
           {/* Step 1 - WhatsApp */}
           <motion.div
             className="bg-[#FF7F56] p-10 text-white min-h-85 flex flex-col justify-between"
@@ -96,10 +96,10 @@ export default function Process() {
                 className="text-[32px] leading-tight font-bold"
                 style={{ fontFamily: "var(--font-sora)" }}
               >
-                Connect via <br /> WhatsApp
+                Connect for a <br /> Free Initial Review.
               </h3>
               <p className="mt-4 text-white/90 leading-relaxed font-medium">
-                Submit your CV through WhatsApp for a free initial review.
+                Submit your CV via WhatsApp for a complimentary, expert-led initial assessment.
               </p>
             </div>
           </motion.div>
@@ -128,11 +128,12 @@ export default function Process() {
                 className="text-[32px] leading-tight font-bold"
                 style={{ fontFamily: "var(--font-sora)" }}
               >
-                 Send Your cv <br />
-                 Get Feedback
+                 Receive <br />
+                 Actionable CV <br />
+                 Feedback.
               </h3>
               <p className="mt-4 text-white/90 leading-relaxed font-medium">
-                 Discuss interview requests and scheduling directly with our team
+                 Gain insights into what&apos;s missing. Optimize your CV to start securing more interview calls.
               </p>
             </div>
           </motion.div>
@@ -167,14 +168,101 @@ export default function Process() {
                 className="text-[32px] leading-tight font-bold"
                  style={{ fontFamily: "var(--font-sora)" }}
               >
-                Mock interview
+                Master the <br />
+                Interview with a <br />
+                Mock Session.
               </h3>
               <p className="mt-4 text-white/90 leading-relaxed font-medium">
-                Attend your interview and receive clear, supportive guidance
+                Identify areas for improvement through a realistic simulation. Learn the exact steps to get hired.
               </p>
             </div>
           </motion.div>
+        </div>
 
+        {/* MOBILE VIEW */}
+        <div className="block lg:hidden flex flex-col gap-6">
+          {/* Step 1 - WhatsApp */}
+          <motion.div
+            className="bg-[#FF7F56] py-10 px-8 text-white relative min-h-[200px] flex flex-col justify-center"
+            style={{
+              borderTopLeftRadius: "60px",
+              borderBottomRightRadius: "60px",
+              borderTopRightRadius: "20px",
+              borderBottomLeftRadius: "20px",
+            }}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+          >
+            <div className="absolute top-6 right-6">
+               <MessageCircle className="h-8 w-8 text-white" strokeWidth={1.5} />
+            </div>
+
+            <h3
+              className="text-[24px] leading-tight font-bold pr-10"
+              style={{ fontFamily: "var(--font-sora)" }}
+            >
+              Connect via WhatsApp
+            </h3>
+            <p className="mt-3 text-white/90 text-[13px] leading-relaxed font-medium">
+              Submit your CV through WhatsApp for a free initial review.
+            </p>
+          </motion.div>
+
+           {/* Step 2 - CV */}
+           <motion.div
+            className="bg-[#4ECDC4] py-10 px-8 text-white rounded-xl min-h-[200px] flex flex-col justify-center"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.1 }}
+          >
+             <div className="mb-4">
+               <MessagesSquare className="h-8 w-8 text-white" strokeWidth={1.5} />
+            </div>
+
+            <h3
+              className="text-[24px] leading-tight font-bold"
+              style={{ fontFamily: "var(--font-sora)" }}
+            >
+               Send Your cv Get Feedback
+            </h3>
+            <p className="mt-3 text-white/90 text-[13px] leading-relaxed font-medium">
+               Discuss interview requests and scheduling directly with our team
+            </p>
+          </motion.div>
+
+           {/* Step 3 - Mock */}
+           <motion.div
+            className="bg-[#8E81FC] py-10 px-8 text-white relative min-h-[200px] flex flex-col justify-center items-end text-right"
+             style={{
+               borderTopRightRadius: "80px",
+               borderBottomLeftRadius: "80px",
+               borderTopLeftRadius: "20px",
+               borderBottomRightRadius: "20px",
+            }}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+          >
+             <div className="absolute top-6 left-6">
+               <Laptop className="h-8 w-8 text-white" strokeWidth={1.5} />
+            </div>
+
+             <div className="w-full text-right mt-8">
+              <h3
+                className="text-[24px] leading-tight font-bold"
+                 style={{ fontFamily: "var(--font-sora)" }}
+              >
+                Mock interview
+              </h3>
+              <p className="mt-3 text-white/90 text-[13px] leading-relaxed font-medium">
+                Attend your interview and receive clear, supportive guidance
+              </p>
+             </div>
+          </motion.div>
         </div>
       </motion.div>
     </section>

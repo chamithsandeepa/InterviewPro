@@ -64,8 +64,8 @@ export default function Benefits() {
           </motion.p>
         </motion.div>
 
-        {/* MAIN GRID */}
-        <div className="mt-16 grid grid-cols-1 lg:grid-cols-3 gap-6">
+        {/* DESKTOP GRID */}
+        <div className="hidden lg:grid mt-16 grid-cols-1 lg:grid-cols-3 gap-6">
           {/* LEFT TALL CARD - Confidence */}
           <motion.div
             className="lg:row-span-2 bg-white border border-gray-300 rounded-xl overflow-hidden flex flex-col justify-between"
@@ -213,6 +213,112 @@ export default function Benefits() {
               Payment details for mock interviews are clearly discussed via
               WhatsApp before confirmation.
             </p>
+          </motion.div>
+        </div>
+
+        {/* MOBILE VIEW */}
+        <div className="block lg:hidden mt-12 flex flex-col gap-6">
+          {/* Card 1: Confidence */}
+          <motion.div
+            className="bg-white border border-gray-300 rounded-xl overflow-hidden flex flex-col"
+            style={{ boxShadow: "0 5px 25px -5px rgba(0,0,0,0.2)" }}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+          >
+            <div className="p-6 pb-2">
+              <p className="text-[14px] font-bold text-[#0C0801]">
+                Confidence
+              </p>
+              <h3 className="mt-1 font-sora text-[26px] font-bold text-[#FFBD43] leading-tight">
+                Boost your <br /> confidence
+              </h3>
+              <p className="mt-3 text-[13px] text-[#0C0801] leading-relaxed">
+                Practice without pressure in a friendly environment
+              </p>
+            </div>
+            <div className="relative w-full h-[220px] mt-4">
+              <Image
+                src="/benefits1.png"
+                alt="Confidence"
+                fill
+                className="object-cover"
+              />
+            </div>
+          </motion.div>
+
+          {/* Card 2: Communication */}
+          <motion.div
+            className="bg-white border border-gray-300 rounded-xl p-6"
+            style={{ boxShadow: "0 5px 25px -5px rgba(0,0,0,0.2)" }}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.1 }}
+          >
+            <Users className="h-8 w-8 text-black mb-3" />
+            <h4 className="font-sora text-[26px] font-bold text-[#FFBD43]">
+              Communication
+            </h4>
+            <p className="mt-1 text-sm font-semibold text-black">
+              Easy WhatsApp communication
+            </p>
+            <p className="mt-2 text-[13px] text-[#0C0801] leading-relaxed">
+              No complicated systems, just simple, fast, and familiar.
+            </p>
+          </motion.div>
+
+          {/* Card 3: Affordable */}
+          <motion.div
+            className="bg-white border border-gray-300 rounded-xl p-6"
+            style={{ boxShadow: "0 5px 25px -5px rgba(0,0,0,0.2)" }}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+          >
+            <ArrowLeftRight className="h-8 w-8 text-black mb-3" />
+            <h4 className="font-sora text-[26px] font-bold text-[#FFBD43]">
+              Affordable
+            </h4>
+            <p className="mt-1 text-sm font-semibold text-black">
+              Affordable & Transparent
+            </p>
+            <p className="mt-2 text-[13px] text-[#0C0801] leading-relaxed">
+                Payment details for mock interviews are clearly discussed via
+              WhatsApp before confirmation.
+            </p>
+          </motion.div>
+
+          {/* Card 4: Expertise */}
+          <motion.div
+            className="bg-white border border-gray-300 rounded-xl overflow-hidden flex flex-row items-center"
+            style={{ boxShadow: "0 5px 25px -5px rgba(0,0,0,0.2)" }}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.3 }}
+          >
+            <div className="p-6 w-[55%]">
+              <p className="text-[14px] font-bold text-[#0C0801]">
+                Expertise
+              </p>
+              <h3 className="mt-1 font-sora text-[26px] font-bold text-[#FFBD43] leading-tight">
+                Expert-led <br /> feedback
+              </h3>
+              <p className="mt-3 text-[13px] text-[#0C0801] leading-relaxed">
+                Understand what interviewers really expect
+              </p>
+            </div>
+            <div className="relative w-[45%] h-[280px]">
+              <Image
+                src="/benefits2.png"
+                alt="Expert feedback"
+                fill
+                className="object-cover"
+              />
+            </div>
           </motion.div>
         </div>
       </motion.div>

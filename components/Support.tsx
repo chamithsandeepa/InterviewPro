@@ -5,7 +5,7 @@ import { motion } from "motion/react";
 
 export default function Support() {
   return (
-    <section className="py-24 bg-[radial-gradient(circle_at_center,_#E6F4FE_0%,_#ffffff_60%)]">
+    <section id="services" className="py-24 bg-[radial-gradient(circle_at_center,_#E6F4FE_0%,_#ffffff_60%)]">
       <div className="mx-auto max-w-7xl px-6">
         {/* Header */}
         <div className="text-center mb-16">

@@ -83,17 +83,17 @@ export default function Team() {
             visible: { opacity: 1, y: 0 },
           }}
         >
-          <motion.span
-            className="text-sm font-bold text-[#0C0801]"
-            variants={{
-              hidden: { opacity: 0, y: 10 },
-              visible: { opacity: 1, y: 0 },
-            }}
-          >
-            Team
-          </motion.span>
-
           <motion.h2
+            className="text-4xl lg:text-[44px] font-sora font-semibold text-black mb-4"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            Meet Our Verified Career Professionals
+          </motion.h2>
+
+          {/* <motion.h2
             className="mt-3 font-sora text-[32px] md:text-[44px] font-bold text-black"
             variants={{
               hidden: { opacity: 0, y: 16 },
@@ -101,7 +101,7 @@ export default function Team() {
             }}
           >
             Meet Our Verified Career Professionals
-          </motion.h2>
+          </motion.h2> */}
 
           <motion.p
             className="mt-4 text-gray-800"
@@ -148,9 +148,10 @@ export default function Team() {
               </h3>
 
               <p className="mt-1 text-sm font-medium text-gray-900">
-               {member.role.includes("@") ? (
+                {member.role.includes("@") ? (
                   <>
-                    {member.role.split("@")[0]} <br /> @ {member.role.split("@")[1]}
+                    {member.role.split("@")[0]} <br /> @{" "}
+                    {member.role.split("@")[1]}
                   </>
                 ) : (
                   member.role
@@ -213,7 +214,7 @@ export default function Team() {
                 onDragEnd={handleDragEnd}
                 className="bg-white border text-center border-gray-200 rounded-2xl p-8 shadow-[0_4px_20px_rgba(0,0,0,0.05)] mx-4 touch-pan-y"
               >
-                 <div className="mx-auto h-24 w-24 overflow-hidden rounded-full mb-4 pointer-events-none">
+                <div className="mx-auto h-24 w-24 overflow-hidden rounded-full mb-4 pointer-events-none">
                   <Image
                     src={teamMembers[activeIndex].image}
                     alt={teamMembers[activeIndex].name}
@@ -235,20 +236,26 @@ export default function Team() {
                   {teamMembers[activeIndex].desc}
                 </p>
 
-                 <div className="flex justify-center gap-6">
+                <div className="flex justify-center gap-6">
                   {teamMembers[activeIndex].linkedin && (
-                    <a href={teamMembers[activeIndex].linkedin} className="text-black">
+                    <a
+                      href={teamMembers[activeIndex].linkedin}
+                      className="text-black"
+                    >
                       <Linkedin className="h-6 w-6" />
                     </a>
                   )}
                   {teamMembers[activeIndex].x && (
                     <a href={teamMembers[activeIndex].x} className="text-black">
-                       <X className="h-6 w-6" />
+                      <X className="h-6 w-6" />
                     </a>
                   )}
-                   {teamMembers[activeIndex].web && (
-                    <a href={teamMembers[activeIndex].web} className="text-black">
-                       <Globe className="h-6 w-6" />
+                  {teamMembers[activeIndex].web && (
+                    <a
+                      href={teamMembers[activeIndex].web}
+                      className="text-black"
+                    >
+                      <Globe className="h-6 w-6" />
                     </a>
                   )}
                 </div>

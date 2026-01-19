@@ -32,18 +32,18 @@ export default function Process() {
             visible: { opacity: 1, y: 0 },
           }}
         >
-          <motion.span
-            className="text-sm font-bold text-[#0C0801]"
+          {/* <motion.span
+            className="text-sm font-bold text-[#3B46F1] lg:text-[#0C0801]"
             variants={{
               hidden: { opacity: 0, y: 10 },
               visible: { opacity: 1, y: 0 },
             }}
           >
             Our Process
-          </motion.span>
+          </motion.span> */}
 
           <motion.h2
-            className="mt-3 text-[32px] font-sora font-bold lg:text-[44px] text-black"
+            className="mt-3 text-[32px] font-sora font-semibold lg:text-[44px] text-black"
             style={{ fontFamily: "var(--font-sora)" }}
             variants={{
               hidden: { opacity: 0, y: 16 },
@@ -180,46 +180,40 @@ export default function Process() {
         </div>
 
         {/* MOBILE VIEW */}
-        <div className="block lg:hidden flex flex-col gap-6">
+        <div className="lg:hidden flex flex-col gap-6">
           {/* Step 1 - WhatsApp */}
           <motion.div
-            className="bg-[#FF7F56] py-10 px-8 text-white relative min-h-[200px] flex flex-col justify-center"
-            style={{
-              borderTopLeftRadius: "60px",
-              borderBottomRightRadius: "60px",
-              borderTopRightRadius: "20px",
-              borderBottomLeftRadius: "20px",
-            }}
+            className="bg-linear-to-r from-[#FF7244] to-[#FFC853] py-10 px-8 text-white rounded-xl min-h-50 flex flex-col items-center text-center justify-center"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
           >
-            <div className="absolute top-6 right-6">
-               <MessageCircle className="h-8 w-8 text-white" strokeWidth={1.5} />
+            <div className="mb-4">
+               <MessageCircle className="h-10 w-10 text-white" strokeWidth={1.5} />
             </div>
 
             <h3
-              className="text-[24px] leading-tight font-bold pr-10"
+              className="text-[24px] leading-tight font-bold"
               style={{ fontFamily: "var(--font-sora)" }}
             >
               Connect via WhatsApp
             </h3>
-            <p className="mt-3 text-white/90 text-[13px] leading-relaxed font-medium">
+            <p className="mt-3 text-white/90 text-[14px] leading-relaxed font-medium">
               Submit your CV through WhatsApp for a free initial review.
             </p>
           </motion.div>
 
            {/* Step 2 - CV */}
            <motion.div
-            className="bg-[#4ECDC4] py-10 px-8 text-white rounded-xl min-h-[200px] flex flex-col justify-center"
+            className="bg-linear-to-r from-[#43AEC6] to-[#69D8E1] py-10 px-8 text-white rounded-xl min-h-50 flex flex-col items-center text-center justify-center"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.1 }}
           >
              <div className="mb-4">
-               <MessagesSquare className="h-8 w-8 text-white" strokeWidth={1.5} />
+               <MessagesSquare className="h-10 w-10 text-white" strokeWidth={1.5} />
             </div>
 
             <h3
@@ -228,37 +222,31 @@ export default function Process() {
             >
                Send Your cv Get Feedback
             </h3>
-            <p className="mt-3 text-white/90 text-[13px] leading-relaxed font-medium">
+            <p className="mt-3 text-white/90 text-[14px] leading-relaxed font-medium">
                Discuss interview requests and scheduling directly with our team
             </p>
           </motion.div>
 
            {/* Step 3 - Mock */}
            <motion.div
-            className="bg-[#8E81FC] py-10 px-8 text-white relative min-h-[200px] flex flex-col justify-center items-end text-right"
-             style={{
-               borderTopRightRadius: "80px",
-               borderBottomLeftRadius: "80px",
-               borderTopLeftRadius: "20px",
-               borderBottomRightRadius: "20px",
-            }}
+            className="bg-[#917FFE] py-10 px-8 text-white rounded-xl min-h-50 flex flex-col items-center text-center justify-center"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.2 }}
           >
-             <div className="absolute top-6 left-6">
-               <Laptop className="h-8 w-8 text-white" strokeWidth={1.5} />
+             <div className="mb-4">
+               <Laptop className="h-10 w-10 text-white" strokeWidth={1.5} />
             </div>
 
-             <div className="w-full text-right mt-8">
+             <div className="w-full">
               <h3
                 className="text-[24px] leading-tight font-bold"
                  style={{ fontFamily: "var(--font-sora)" }}
               >
                 Mock interview
               </h3>
-              <p className="mt-3 text-white/90 text-[13px] leading-relaxed font-medium">
+              <p className="mt-3 text-white/90 text-[14px] leading-relaxed font-medium">
                 Attend your interview and receive clear, supportive guidance
               </p>
              </div>

@@ -1,194 +1,106 @@
 "use client";
 
-import { HandCoins, ShieldCheck } from "lucide-react";
+import { HandCoins, ShieldCheck, Mail, Users } from "lucide-react";
 import { motion } from "motion/react";
 
 export default function Trust() {
+  const cards = [
+    {
+      bg: "bg-[#A3E4E6]", // Pastal Cyan/Teal
+      icon: <HandCoins className="h-8 w-8 text-black stroke-[1.5]" />,
+      preTitle: "No hidden costs, ever.",
+      title: "CV review costs nothing",
+      desc: "Upload and get honest feedback without any payment required upfront.",
+      radius: "rounded-[32px] rounded-br-[8px]", // Asymmetric based on previous, or simple rounded? User asked to "look like this given image". The image shows rounded-bl [large] for card 1. Let's stick to uniform simple 'rounded-3xl' first as it fits "look like this". Actually let's just use standard rounded-3xl for all.
+    },
+    {
+      bg: "bg-[#FDE49E]", // Pastel Yellow
+      icon: <Mail className="h-8 w-8 text-black stroke-[1.5]" />, // Using Mail icon for "WhatsApp" concept/simple msg
+      preTitle: "WhatsApp keeps it simple",
+      title: "No complicated platforms.",
+      desc: "We connect through WhatsApp, so you can talk and share files comfortably.",
+    },
+    {
+      bg: "bg-[#C8C2FC]", // Pastel Purple
+      icon: <ShieldCheck className="h-8 w-8 text-black stroke-[1.5]" />,
+      preTitle: "Privacy Guaranteed",
+      title: "Your CV stays private always",
+      desc: "We never share your information without your explicit permission.",
+    },
+    {
+      bg: "bg-[#FCAE95]", // Pastel Coral
+      icon: <Users className="h-8 w-8 text-black stroke-[1.5]" />,
+      preTitle: "Verified Professionals",
+      title: "Trusted experts only.",
+      desc: "Every mentor is checked. You're working with real industry experience.",
+    },
+  ];
+
   return (
     <section id="features" className="bg-[#FAFDF7] py-24 font-inter">
-      <motion.div
-        className="mx-auto max-w-7xl px-6"
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true }}
-        variants={{
-          hidden: { opacity: 0, y: 40 },
-          visible: {
-            opacity: 1,
-            y: 0,
-            transition: {
-              duration: 0.8,
-              ease: "easeOut",
-              staggerChildren: 0.12,
-            },
-          },
-        }}
-      >
+      <div className="mx-auto max-w-7xl px-6">
         {/* HEADER */}
-        <motion.div
-          className="text-center max-w-2xl mx-auto"
-          variants={{
-            hidden: { opacity: 0, y: 20 },
-            visible: { opacity: 1, y: 0 },
-          }}
-        >
-          <motion.p
-            className="text-sm font-semibold text-[#0C0801]"
-            variants={{
-              hidden: { opacity: 0, y: 10 },
-              visible: { opacity: 1, y: 0 },
-            }}
+        <div className="text-center max-w-3xl mx-auto mb-16">
+          {/* <motion.h2
+            className="font-sora text-4xl lg:text-5xl font-bold text-black mb-4"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
           >
-            Trust
-          </motion.p>
+            Safe, Secure and Transparent
+          </motion.h2> */}
 
           <motion.h2
-            className="mt-3 font-sora text-[32px] font-semibold text-black lg:text-[44px]"
-            variants={{
-              hidden: { opacity: 0, y: 16 },
-              visible: { opacity: 1, y: 0 },
-            }}
+            className="text-4xl lg:text-[44px] font-sora font-semibold text-black mb-4"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
           >
             Safe, Secure and Transparent
           </motion.h2>
 
           <motion.p
-            className="mt-4 text-gray-800"
-            variants={{
-              hidden: { opacity: 0, y: 12 },
-              visible: { opacity: 1, y: 0 },
-            }}
+            className="text-gray-600 text-lg"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.2 }}
           >
             Your privacy and peace of mind matter to us
           </motion.p>
-        </motion.div>
-
-        {/* CARDS */}
-        <div className="mt-16 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4 items-start">
-          {/* CARD 1 – Tall */}
-          <motion.div
-            className="bg-[#9EE2E4] p-8 rounded-[15px]"
-            style={{
-              borderBottomRightRadius: "70px",
-              animationDuration: "6s",
-            }}
-            variants={{
-              hidden: { opacity: 0, y: 40 },
-              visible: { opacity: 1, y: 0 },
-            }}
-            transition={{ duration: 0.6, ease: "easeOut" }}
-            whileHover={{ y: -6, rotate: -0.5 }}
-            animate={{ y: [0, -6, 0] }}
-          >
-            <motion.div
-              initial={{ scale: 0.7, opacity: 0 }}
-              whileInView={{ scale: 1, opacity: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.4, ease: "easeOut" }}
-            >
-              <HandCoins className="h-9 w-9 text-black stroke-[2.5]" />
-            </motion.div>
-
-            <p className="mt-8 text-sm font-medium text-black">
-              No hidden costs, ever.
-            </p>
-
-            <h3 className="mt-3 font-sora text-[26px] font-bold text-black leading-[1.2]">
-              CV review costs nothing
-            </h3>
-
-            <p className="mt-4 text-[15px] text-black/80 leading-relaxed">
-              Upload and get honest feedback without any payment required
-              upfront.
-            </p>
-          </motion.div>
-
-          {/* CARD 2 – Short */}
-          <motion.div
-            className="bg-[#FCDA91] p-8 rounded-[15px]"
-            variants={{
-              hidden: { opacity: 0, y: 30 },
-              visible: { opacity: 1, y: 0 },
-            }}
-            transition={{ duration: 0.6, ease: "easeOut", delay: 0.05 }}
-            whileHover={{ y: -6, rotate: 0.5 }}
-          >
-            <p className="text-sm font-medium text-black">
-              WhatsApp keeps it simple
-            </p>
-
-            <h3 className="mt-3 font-sora text-[26px] font-bold text-black leading-[1.2]">
-              No complicated platforms.
-            </h3>
-
-            <p className="mt-4 text-[15px] text-black/80 leading-relaxed">
-              We connect through WhatsApp, so you can talk and share files
-              comfortably.
-            </p>
-          </motion.div>
-
-          {/* CARD 3 – Tall */}
-          <motion.div
-            className="bg-[#BCB2FE] p-8 rounded-[15px]"
-            style={{
-              borderBottomRightRadius: "70px",
-              animationDuration: "7s",
-            }}
-            variants={{
-              hidden: { opacity: 0, y: 40 },
-              visible: { opacity: 1, y: 0 },
-            }}
-            transition={{ duration: 0.6, ease: "easeOut", delay: 0.1 }}
-            whileHover={{ y: -6, rotate: -0.5 }}
-            animate={{ y: [0, -6, 0] }}
-          >
-            <motion.div
-              initial={{ scale: 0.7, opacity: 0 }}
-              whileInView={{ scale: 1, opacity: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.4, ease: "easeOut" }}
-            >
-              <ShieldCheck className="h-9 w-9 text-black stroke-[2.5]" />
-            </motion.div>
-
-            <p className="mt-8 text-sm font-medium text-black">
-              Privacy Guaranteed
-            </p>
-
-            <h3 className="mt-3 font-sora text-[26px] font-bold text-black leading-[1.2]">
-              Your CV stays private always
-            </h3>
-
-            <p className="mt-4 text-[15px] text-black/80 leading-relaxed">
-              We never share your information without your explicit permission.
-            </p>
-          </motion.div>
-
-          {/* CARD 4 – Short */}
-          <motion.div
-            className="bg-[#F99D83] p-8 rounded-[15px]"
-            variants={{
-              hidden: { opacity: 0, y: 30 },
-              visible: { opacity: 1, y: 0 },
-            }}
-            transition={{ duration: 0.6, ease: "easeOut", delay: 0.15 }}
-            whileHover={{ y: -6, rotate: 0.5 }}
-          >
-            <p className="text-sm font-medium text-black">
-              Verified Professionals
-            </p>
-
-            <h3 className="mt-3 font-sora text-[26px] font-bold text-black leading-[1.2]">
-              Trusted experts only.
-            </h3>
-
-            <p className="mt-4 text-[15px] text-black/80 leading-relaxed">
-              Every mentor is checked. You're working with real industry
-              experience.
-            </p>
-          </motion.div>
         </div>
-      </motion.div>
+
+        {/* CARDS GRID */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          {cards.map((card, idx) => (
+            <motion.div
+              key={idx}
+              className={`${card.bg} p-8 rounded-2xl rounded-br-[80px] flex flex-col items-start h-full`}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: idx * 0.1 }}
+              whileHover={{ y: -6 }}
+            >
+              <div className="mb-6">{card.icon}</div>
+
+              <p className="text-sm font-bold text-black mb-2">
+                {card.preTitle}
+              </p>
+
+              <h3 className="font-sora text-2xl font-bold text-black leading-tight mb-4">
+                {card.title}
+              </h3>
+
+              <p className="text-black/80 text-[15px] leading-relaxed mt-auto">
+                {card.desc}
+              </p>
+            </motion.div>
+          ))}
+        </div>
+      </div>
     </section>
   );
 }

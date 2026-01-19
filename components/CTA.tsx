@@ -6,7 +6,7 @@ export default function CTA() {
   return (
     <section
       id="contact"
-      className="bg-linear-to-b from-white to-[#FFF0EC] py-32 font-inter overflow-hidden"
+      className="bg-white py-32 font-inter overflow-hidden"
     >
       <div className="mx-auto max-w-4xl px-6">
         {/* DESKTOP VIEW */}
@@ -18,15 +18,25 @@ export default function CTA() {
             transition={{ duration: 0.8, ease: "easeOut" }}
           >
             {/* Heading */}
-            <motion.h2
-              className="font-sora text-[40px] md:text-[44px] font-bold text-black tracking-tight"
+            {/* <motion.h2
+              className="font-sora text-[40px] md:text-[54px] font-bold text-black tracking-tight"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.1 }}
             >
               Start preparing today
-            </motion.h2>
+            </motion.h2> */}
+
+            <motion.h2
+            className="text-4xl lg:text-6xl font-sora font-semibold text-black mb-4"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            Start preparing today
+          </motion.h2>
 
             {/* Subtext */}
             <motion.p
@@ -49,14 +59,14 @@ export default function CTA() {
             >
               <motion.a
                 href="tel:+94701134650"
-                className="rounded-lg bg-[#3B46F1] px-10 py-4 text-base font-semibold text-white shadow-lg shadow-indigo-200"
+                className="rounded-lg bg-[#917FFE] px-10 py-4 text-base font-semibold text-white shadow-lg shadow-indigo-200"
                 whileHover={{
                   scale: 1.05,
                   boxShadow: "0px 15px 35px rgba(59, 70, 241, 0.35)",
                 }}
                 whileTap={{ scale: 0.95 }}
               >
-                Contact Us
+                Try Now
               </motion.a>
             </motion.div>
           </motion.div>

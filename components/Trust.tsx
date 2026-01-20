@@ -52,7 +52,7 @@ export default function Trust() {
           </motion.h2> */}
 
           <motion.h2
-            className="text-4xl lg:text-[44px] font-sora font-semibold text-black mb-4"
+            className="text-[30px] lg:text-[44px] font-sora font-semibold text-black mb-4"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -62,7 +62,7 @@ export default function Trust() {
           </motion.h2>
 
           <motion.p
-            className="text-gray-600 text-lg"
+            className="text-gray-600 text-[13px] lg:text-lg"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -73,7 +73,8 @@ export default function Trust() {
         </div>
 
         {/* CARDS GRID */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        {/* DESKTOP VIEW */}
+        <div className="hidden lg:grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {cards.map((card, idx) => (
             <motion.div
               key={idx}
@@ -98,6 +99,26 @@ export default function Trust() {
                 {card.desc}
               </p>
             </motion.div>
+          ))}
+        </div>
+
+        {/* MOBILE VIEW */}
+        <div className="lg:hidden flex flex-col gap-4">
+          {cards.map((card, idx) => (
+            <div
+              key={idx}
+              className={`${card.bg} p-6 rounded-2xl flex flex-col items-start`}
+            >
+              <div className="mb-4 text-black">{card.icon}</div>
+
+              <h3 className="font-sora text-[18px] font-bold text-black leading-tight mb-2">
+                {card.title}
+              </h3>
+
+              <p className="text-black/80 text-[12px] leading-relaxed">
+                {card.desc}
+              </p>
+            </div>
           ))}
         </div>
       </div>

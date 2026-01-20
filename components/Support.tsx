@@ -10,7 +10,7 @@ export default function Support() {
         {/* Header */}
         <div className="text-center mb-16">
           <motion.h2
-            className="text-4xl md:text-5xl font-sora font-semibold text-black mb-4"
+            className="text-[30px] lg:text-5xl font-sora font-semibold text-black mb-4"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -20,7 +20,7 @@ export default function Support() {
           </motion.h2>
 
           <motion.p
-            className="text-gray-600 text-lg font-inter"
+            className="text-gray-600 text-[13px] lg:text-lg font-inter"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -31,7 +31,8 @@ export default function Support() {
         </div>
 
         {/* Cards */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 max-w-5xl mx-auto">
+        {/* Desktop Cards Grid - Hidden on Mobile */}
+        <div className="hidden lg:grid grid-cols-1 lg:grid-cols-2 gap-10 max-w-5xl mx-auto">
           {/* CV Review */}
           <motion.div
             className="relative bg-white rounded-3xl p-8 border border-blue-100 shadow-sm hover:shadow-md transition flex flex-col"
@@ -73,9 +74,16 @@ export default function Support() {
             </div>
 
             {/* Button at bottom */}
-            <button className="mt-auto w-full border-2 border-[#10B981] text-[#10B981] font-semibold py-3 rounded-xl hover:bg-green-50 transition">
+            {/* Button at bottom */}
+            <motion.a 
+              href="https://wa.me/94701134650?text=I%20need%20to%20review%20my%20CV"
+              target="_blank"
+              rel="noopener noreferrer"
+              whileTap={{ scale: 0.95 }}
+              className="mt-auto w-full border-2 border-[#10B981] text-[#10B981] font-semibold py-3 rounded-xl hover:bg-green-50 transition text-center block"
+            >
               Submit Your CV Now
-            </button>
+            </motion.a>
           </motion.div>
 
           {/* Master Interviews */}
@@ -114,10 +122,74 @@ export default function Support() {
             </div>
 
             {/* Button at bottom */}
-            <button className="mt-auto w-full bg-[#10A37F] text-white font-semibold py-3 rounded-xl hover:bg-[#0D8A6A] transition shadow-lg shadow-green-200">
+            {/* Button at bottom */}
+            <motion.a 
+              href="https://wa.me/94701134650"
+              target="_blank"
+              rel="noopener noreferrer"
+              whileTap={{ scale: 0.95 }}
+              className="mt-auto w-full bg-[#10A37F] text-white font-semibold py-3 rounded-xl hover:bg-[#0D8A6A] transition shadow-lg shadow-green-200 text-center block"
+            >
               Get Started
-            </button>
+            </motion.a>
           </motion.div>
+        </div>
+
+        {/* Mobile View - Specific Layout */}
+        <div className="lg:hidden flex flex-col gap-8 max-w-sm mx-auto">
+          {/* Card 1: CV Review */}
+          <div className="flex gap-4 items-start">
+             {/* Circular Image */}
+             <div className="w-24 h-24 shrink-0 bg-gray-100 rounded-full flex items-center justify-center relative">
+                 <Image src="/sup1.png" alt="CV" width={70} height={70} className="object-contain" />
+             </div>
+             {/* Content */}
+             <div className="flex-1">
+                 <div className="flex items-center gap-2 mb-2">
+                     <span className="bg-[#FFB224] text-black font-bold text-xs px-2 py-0.5 rounded">Free</span>
+                     <h3 className="font-sora font-bold text-black text-lg">CV review</h3>
+                 </div>
+                 <p className="text-[12px] text-gray-600 leading-relaxed mb-4">
+                    Upload your CV via WhatsApp and get personalized feedback completely free. Ideal for students and fresh graduates.
+                 </p>
+                 <motion.a 
+                    href="https://wa.me/94701134650?text=I%20need%20to%20review%20my%20CV"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    whileTap={{ scale: 0.95 }}
+                    className="w-full border border-[#10B981] text-[#10B981] text-sm font-semibold py-2 rounded-full hover:bg-green-50 transition text-center block"
+                 >
+                    Submit your CV Now
+                 </motion.a>
+             </div>
+          </div>
+
+          {/* Divider */}
+          <div className="h-px w-full bg-gray-200 my-2"></div>
+
+          {/* Card 2: Master Interviews */}
+          <div className="flex gap-4 items-start">
+             {/* Circular Image */}
+             <div className="w-24 h-24 shrink-0 bg-gray-100 rounded-full flex items-center justify-center">
+                 <Image src="/sup2.png" alt="Master" width={70} height={70} className="object-contain" />
+             </div>
+             {/* Content */}
+             <div className="flex-1">
+                 <h3 className="font-sora font-bold text-black text-lg mb-2">Master your Interviews</h3>
+                 <p className="text-[12px] text-gray-600 leading-relaxed mb-4">
+                    Practice real interview questions with industry experts. Book a one-on-one mock interview via WhatsApp.
+                 </p>
+                 <motion.a 
+                    href="https://wa.me/94701134650"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    whileTap={{ scale: 0.95 }}
+                    className="w-full bg-[#10A37F] text-white text-sm font-semibold py-2 rounded-lg hover:bg-[#0D8A6A] transition text-center block"
+                 >
+                    Get Started
+                 </motion.a>
+             </div>
+          </div>
         </div>
       </div>
     </section>

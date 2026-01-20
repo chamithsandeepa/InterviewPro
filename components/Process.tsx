@@ -43,7 +43,7 @@ export default function Process() {
           </motion.span> */}
 
           <motion.h2
-            className="mt-3 text-[32px] font-sora font-semibold lg:text-[44px] text-black"
+            className="mt-3 text-[30px] font-sora font-semibold lg:text-[44px] text-black"
             style={{ fontFamily: "var(--font-sora)" }}
             variants={{
               hidden: { opacity: 0, y: 16 },
@@ -54,7 +54,7 @@ export default function Process() {
           </motion.h2>
 
           <motion.p
-            className="mt-4 text-gray-700 font-medium"
+            className="mt-4 text-[13px] lg:text-base text-gray-700 font-medium"
             variants={{
               hidden: { opacity: 0, y: 12 },
               visible: { opacity: 1, y: 0 },
@@ -180,76 +180,83 @@ export default function Process() {
         </div>
 
         {/* MOBILE VIEW */}
-        <div className="lg:hidden flex flex-col gap-6">
-          {/* Step 1 - WhatsApp */}
+        {/* MOBILE VIEW */}
+        <div className="lg:hidden flex flex-col gap-4">
+          {/* Step 1 - Connect */}
           <motion.div
-            className="bg-linear-to-r from-[#FF7244] to-[#FFC853] py-10 px-8 text-white rounded-xl min-h-50 flex flex-col items-center text-center justify-center"
+            className="bg-gradient-to-r from-[#FF9A63] to-[#FFC853] p-6 text-white rounded-3xl flex flex-col"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
           >
-            <div className="mb-4">
-               <MessageCircle className="h-10 w-10 text-white" strokeWidth={1.5} />
+            <div className="flex items-start gap-4 mb-3">
+                <div className="bg-white/20 w-12 h-12 rounded-full flex items-center justify-center backdrop-blur-sm shrink-0">
+                  <MessageCircle className="h-6 w-6 text-white" strokeWidth={2} />
+                </div>
+                <h3
+                  className="text-[18px] font-bold leading-tight pt-1"
+                  style={{ fontFamily: "var(--font-sora)" }}
+                >
+                  Connect for a Free <br/> Initial Review.
+                </h3>
             </div>
-
-            <h3
-              className="text-[24px] leading-tight font-bold"
-              style={{ fontFamily: "var(--font-sora)" }}
-            >
-              Connect via WhatsApp
-            </h3>
-            <p className="mt-3 text-white/90 text-[14px] leading-relaxed font-medium">
-              Submit your CV through WhatsApp for a free initial review.
+            
+            <p className="text-white/90 text-[12px] leading-relaxed font-medium">
+              Submit your CV via WhatsApp for a complimentary, expert-led initial assessment.
             </p>
           </motion.div>
 
            {/* Step 2 - CV */}
            <motion.div
-            className="bg-linear-to-r from-[#43AEC6] to-[#69D8E1] py-10 px-8 text-white rounded-xl min-h-50 flex flex-col items-center text-center justify-center"
+            className="bg-gradient-to-r from-[#4ECDC4] to-[#55E6D8] p-6 text-white rounded-3xl flex flex-col"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.1 }}
           >
-             <div className="mb-4">
-               <MessagesSquare className="h-10 w-10 text-white" strokeWidth={1.5} />
+             <div className="flex items-start gap-4 mb-3">
+                <div className="bg-white/20 w-12 h-12 rounded-full flex items-center justify-center backdrop-blur-sm shrink-0">
+                  <MessagesSquare className="h-6 w-6 text-white" strokeWidth={2} />
+                </div>
+
+                <h3
+                  className="text-[18px] font-bold leading-tight pt-1"
+                  style={{ fontFamily: "var(--font-sora)" }}
+                >
+                  Receive Actionable <br/> CV Feedback.
+                </h3>
             </div>
 
-            <h3
-              className="text-[24px] leading-tight font-bold"
-              style={{ fontFamily: "var(--font-sora)" }}
-            >
-               Send Your cv Get Feedback
-            </h3>
-            <p className="mt-3 text-white/90 text-[14px] leading-relaxed font-medium">
-               Discuss interview requests and scheduling directly with our team
+            <p className="text-white/90 text-[12px] leading-relaxed font-medium">
+               Gain insights into what&apos;s missing. Optimize your CV to start securing more interview calls.
             </p>
           </motion.div>
 
            {/* Step 3 - Mock */}
            <motion.div
-            className="bg-[#917FFE] py-10 px-8 text-white rounded-xl min-h-50 flex flex-col items-center text-center justify-center"
+            className="bg-gradient-to-r from-[#8B7CFF] to-[#B0A6FF] p-6 text-white rounded-3xl flex flex-col"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.2 }}
           >
-             <div className="mb-4">
-               <Laptop className="h-10 w-10 text-white" strokeWidth={1.5} />
+             <div className="flex items-start gap-4 mb-3">
+                <div className="bg-white/20 w-12 h-12 rounded-full flex items-center justify-center backdrop-blur-sm shrink-0">
+                  <Laptop className="h-6 w-6 text-white" strokeWidth={2} />
+                </div>
+
+                <h3
+                  className="text-[18px] font-bold leading-tight pt-1"
+                  style={{ fontFamily: "var(--font-sora)" }}
+                >
+                  Master the Interview <br/> with a Mock Session.
+                </h3>
             </div>
 
-             <div className="w-full">
-              <h3
-                className="text-[24px] leading-tight font-bold"
-                 style={{ fontFamily: "var(--font-sora)" }}
-              >
-                Mock interview
-              </h3>
-              <p className="mt-3 text-white/90 text-[14px] leading-relaxed font-medium">
-                Attend your interview and receive clear, supportive guidance
-              </p>
-             </div>
+            <p className="text-white/90 text-[12px] leading-relaxed font-medium">
+               Identify areas for improvement through a realistic simulation. Learn the exact steps to get hired.
+            </p>
           </motion.div>
         </div>
       </motion.div>

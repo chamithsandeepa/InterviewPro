@@ -28,17 +28,17 @@ export default function Team() {
       web: null,
     },
     {
-      name: "James Rivera",
-      role: "UI/UX designer",
-      desc: "Portfolio expert. Helps students present their work in ways that land interviews.",
-      image: "/user3.png",
+      name: "Kavindi Sulakkhana",
+      role: "Human Resource Expert",
+      desc: "HR specialist providing insights into the recruitment process and what companies really look for.",
+      image: "/team3.jpeg",
       linkedin: "#",
       x: "#",
       web: "#",
     },
   ];
 
-  const handleDragEnd = (event: any, info: any) => {
+  const handleDragEnd = (event: MouseEvent | TouchEvent | PointerEvent, info: any) => {
     const offset = info.offset.x;
     const velocity = info.velocity.x;
 
@@ -84,7 +84,7 @@ export default function Team() {
           }}
         >
           <motion.h2
-            className="text-4xl lg:text-[44px] font-sora font-semibold text-black mb-4"
+            className="text-[30px] lg:text-[44px] font-sora font-semibold text-black mb-4"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -104,7 +104,7 @@ export default function Team() {
           </motion.h2> */}
 
           <motion.p
-            className="mt-4 text-gray-800"
+            className="mt-4 text-gray-800 text-[13px] lg:text-base bg-white"
             variants={{
               hidden: { opacity: 0, y: 12 },
               visible: { opacity: 1, y: 0 },
@@ -199,7 +199,7 @@ export default function Team() {
         </div>
 
         {/* MOBILE CAROUSEL */}
-        <div className="block lg:hidden mt-12 overflow-hidden">
+        <div className="block lg:hidden mt-8 overflow-hidden">
           <div className="relative min-h-[400px]">
             <AnimatePresence mode="wait">
               <motion.div
@@ -212,7 +212,7 @@ export default function Team() {
                 dragConstraints={{ left: 0, right: 0 }}
                 dragElastic={0.2}
                 onDragEnd={handleDragEnd}
-                className="bg-white border text-center border-gray-200 rounded-2xl p-8 shadow-[0_4px_20px_rgba(0,0,0,0.05)] mx-4 touch-pan-y"
+                className="bg-white border text-center border-gray-100 rounded-[30px] p-8 shadow-[0_4px_20px_rgba(0,0,0,0.05)] mx-4 touch-pan-y"
               >
                 <div className="mx-auto h-24 w-24 overflow-hidden rounded-full mb-4 pointer-events-none">
                   <Image
@@ -228,34 +228,21 @@ export default function Team() {
                   {teamMembers[activeIndex].name}
                 </h3>
 
-                <p className="text-[14px] font-normal text-gray-900 mb-4">
+                <p className="text-[14px] font-medium text-[#8B7CFF] mb-6">
                   {teamMembers[activeIndex].role}
                 </p>
 
-                <p className="text-[13px] text-gray-800 leading-relaxed mb-8">
+                <p className="text-[14px] text-gray-900 leading-relaxed mb-8 font-normal">
                   {teamMembers[activeIndex].desc}
                 </p>
 
-                <div className="flex justify-center gap-6">
+                <div className="flex justify-center">
                   {teamMembers[activeIndex].linkedin && (
                     <a
                       href={teamMembers[activeIndex].linkedin}
-                      className="text-black"
+                      className="text-black inline-block"
                     >
                       <Linkedin className="h-6 w-6" />
-                    </a>
-                  )}
-                  {teamMembers[activeIndex].x && (
-                    <a href={teamMembers[activeIndex].x} className="text-black">
-                      <X className="h-6 w-6" />
-                    </a>
-                  )}
-                  {teamMembers[activeIndex].web && (
-                    <a
-                      href={teamMembers[activeIndex].web}
-                      className="text-black"
-                    >
-                      <Globe className="h-6 w-6" />
                     </a>
                   )}
                 </div>
@@ -270,7 +257,7 @@ export default function Team() {
                 key={idx}
                 onClick={() => setActiveIndex(idx)}
                 className={`w-2.5 h-2.5 rounded-full transition-colors cursor-pointer ${
-                  idx === activeIndex ? "bg-black" : "bg-gray-300"
+                  idx === activeIndex ? "bg-[#8B7CFF]" : "bg-[#E0D9FF]"
                 }`}
               />
             ))}

@@ -44,7 +44,7 @@ export default function Benefits() {
         {/* Header */}
         <div className="text-center max-w-2xl mx-auto mb-16">
           <motion.h2
-            className="font-sora text-4xl lg:text-5xl font-semibold text-black mb-4"
+            className="text-[30px] lg:text-5xl font-sora font-semibold text-black mb-4"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -54,7 +54,7 @@ export default function Benefits() {
           </motion.h2>
 
           <motion.p
-            className="text-gray-600 text-[17px] font-inter"
+            className="text-gray-600 text-[13px] lg:text-[17px] font-inter"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -65,7 +65,8 @@ export default function Benefits() {
         </div>
 
         {/* Cards Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        {/* Desktop Cards Grid - Hidden on mobile */}
+        <div className="hidden lg:grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {cards.map((card, idx) => (
             <motion.div
               key={idx}
@@ -107,6 +108,42 @@ export default function Benefits() {
               </div>
             </motion.div>
           ))}
+        </div>
+
+        {/* Mobile View - 2 Column Grid */}
+        <div className="lg:hidden grid grid-cols-2 gap-4">
+           {[cards[0], cards[1], cards[3], cards[2]].map((card, idx) => (
+             <div key={idx} className="rounded-2xl overflow-hidden bg-white border border-gray-100 flex flex-col h-full shadow-sm">
+                {/* Top Section */}
+                {card.type === "image" ? (
+                  <div className="relative h-32 w-full">
+                    <Image
+                      src={card.image!}
+                      alt={card.title}
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                ) : (
+                   <div className={`h-32 w-full flex items-center justify-center ${card.bg}`}>
+                      {/* Scale icon down for mobile */}
+                      <div className="scale-75 transform">
+                        {card.icon}
+                      </div>
+                   </div>
+                )}
+                
+                {/* Content */}
+                <div className="p-4 flex flex-col flex-1">
+                  <h3 className={`font-sora text-[14px] font-bold ${card.titleColor} mb-2 leading-tight`}>
+                    {card.title}
+                  </h3>
+                   <p className="text-[#6B7280] text-[10px] leading-relaxed mt-auto">
+                    {card.desc}
+                   </p>
+                </div>
+             </div>
+           ))}
         </div>
       </div>
     </section>

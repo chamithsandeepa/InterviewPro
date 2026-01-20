@@ -66,7 +66,7 @@ export default function Hero() {
               }}
             >
               For years, we’ve watched brilliant students fail job interviews, not
-              because they weren't smart, but because they weren't prepared.
+              because they weren&apos;t smart, but because they weren&apos;t prepared.
             </motion.p>
 
             <motion.div
@@ -156,15 +156,14 @@ export default function Hero() {
             viewport={{ once: true }}
           >
             <h1
-               className="font-sora text-[32px] font-bold text-black leading-tight"
+               className="font-sora text-[30px] font-bold text-black leading-tight"
                style={{ fontFamily: "var(--font-sora)" }}
             >
-              Practice your <br/>
-              <span className="text-[#FFBD43]">interview</span> with real <br/>
-              career experts
+              Practice your <span className="text-[#FFBD43]">interview</span> with Us <br/>
+              before the <span className="text-[#C6AAFF]">interview</span>
             </h1>
             <p className="mt-4 text-[14px] text-gray-600 leading-relaxed">
-              Upload your CV, receive expert guidance, and practice interviews with confidence. You&apos;re not alone in this journey.
+              For years, we’ve watched brilliant students fail job interviews, not because they weren&apos;t smart, but because they weren&apos;t prepared.
             </p>
           </motion.div>
 
@@ -208,7 +207,7 @@ export default function Hero() {
                 target="_blank"
                 rel="noopener noreferrer"
                 whileTap={{ scale: 0.95 }}
-                className="rounded-lg bg-[#8E81FC] px-8 py-3.5 text-white text-[15px] font-medium w-fit shadow-md shadow-indigo-200"
+                className="rounded-full bg-[#8E81FC] px-8 py-3.5 text-white text-[12px] font-bold w-full text-center shadow-md shadow-indigo-200"
               >
                 Get a Free CV Review
             </motion.a>
@@ -218,7 +217,7 @@ export default function Hero() {
                 target="_blank"
                 rel="noopener noreferrer"
                 whileTap={{ scale: 0.95 }}
-                className="rounded-lg border-[1.5px] border-[#8E81FC] px-8 py-3.5 text-[#8E81FC] text-[15px] font-medium w-fit"
+                className="rounded-full border-[1.5px] border-[#E5E7EB] bg-white text-[#8E81FC] text-[12px] font-bold w-full text-center py-3.5"
               >
                 Book a Mock Interview
             </motion.a>

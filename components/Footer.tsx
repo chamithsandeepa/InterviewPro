@@ -123,7 +123,7 @@ export default function Footer() {
               height={60}
               className="h-10 w-auto object-contain mb-4"
             />
-            <p className="text-[15px] font-medium text-[#0C0801] max-w-xs mx-auto">
+            <p className="text-[16px] text-gray-600 font-normal mt-2 max-w-xs mx-auto">
               Practice your interview with real career experts
             </p>
           </div>

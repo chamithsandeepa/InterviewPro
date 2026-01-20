@@ -73,31 +73,32 @@ export default function CTA() {
         </div>
 
         {/* MOBILE VIEW */}
-        <div className="block lg:hidden text-center">
+        <div className="block lg:hidden text-center px-4">
           <motion.div
+            className="bg-[#8E81FC] rounded-[30px] p-10 shadow-xl"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
             {/* Heading */}
-            <h2 className="font-sora text-[32px] font-bold text-black leading-tight">
+            <h2 className="font-sora text-[26px] font-bold text-white leading-tight">
               Start preparing today
             </h2>
 
             {/* Subtext */}
-            <p className="mt-6 text-[#0C0801] text-[16px] leading-relaxed px-4">
-              Your future self will thank you for taking this step now
+            <p className="mt-4 text-white/90 text-[14px] leading-relaxed font-medium">
+              Real interviews aren&apos;t for practice. That&apos;s what we&apos;re here for.
             </p>
 
             {/* Button */}
-            <div className="mt-10 flex justify-center">
+            <div className="mt-8 flex justify-center">
               <motion.a
                 href="tel:+94701134650"
-                className="rounded-lg bg-[#3B46F1] px-12 py-3.5 text-[15px] font-semibold text-white shadow-md shadow-indigo-200 w-full max-w-[200px]"
+                className="rounded-full bg-white px-10 py-3.5 text-[14px] font-bold text-[#8B7CFF] shadow-lg w-fit"
                 whileTap={{ scale: 0.95 }}
               >
-                Contact Us
+                Try Now
               </motion.a>
             </div>
           </motion.div>

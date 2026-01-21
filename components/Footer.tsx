@@ -91,7 +91,7 @@ export default function Footer() {
             transition={{ duration: 0.6, delay: 0.4 }}
           >
             <motion.a
-              href="https://facebook.com"
+              href="https://web.facebook.com/profile.php?id=61585981945769"
               target="_blank"
               rel="noopener noreferrer"
               whileHover={{ scale: 1.15, y: -2 }}
@@ -101,7 +101,7 @@ export default function Footer() {
             </motion.a>
 
             <motion.a
-              href="https://linkedin.com"
+              href="https://www.linkedin.com/company/interview-pro-career-personality-lab"
               target="_blank"
               rel="noopener noreferrer"
               whileHover={{ scale: 1.15, y: -2 }}
@@ -129,40 +129,46 @@ export default function Footer() {
           </div>
 
           <div className="flex justify-between px-6">
-             {/* Links Col 1 */}
-             <div className="flex flex-col gap-3">
-                 {linkscol1.map((link) => (
-                  <a
-                    key={link.label}
-                    href={link.href}
-                    className="text-sm font-semibold text-[#0C0801]"
-                  >
-                    {link.label}
-                  </a>
-                ))}
-             </div>
+            {/* Links Col 1 */}
+            <div className="flex flex-col gap-3">
+              {linkscol1.map((link) => (
+                <a
+                  key={link.label}
+                  href={link.href}
+                  className="text-sm font-semibold text-[#0C0801]"
+                >
+                  {link.label}
+                </a>
+              ))}
+            </div>
 
-              {/* Links Col 2 */}
-             <div className="flex flex-col gap-3">
-                 {linkscol2.map((link) => (
-                  <a
-                    key={link.label}
-                    href={link.href}
-                    className="text-sm font-semibold text-[#0C0801]"
-                  >
-                    {link.label}
-                  </a>
-                ))}
-             </div>
+            {/* Links Col 2 */}
+            <div className="flex flex-col gap-3">
+              {linkscol2.map((link) => (
+                <a
+                  key={link.label}
+                  href={link.href}
+                  className="text-sm font-semibold text-[#0C0801]"
+                >
+                  {link.label}
+                </a>
+              ))}
+            </div>
           </div>
 
           {/* Socials */}
           <div className="flex justify-center gap-6">
-            <a href="#" className="text-black">
-               <Facebook className="h-6 w-6" fill="currentColor" />
+            <a
+              href="https://web.facebook.com/profile.php?id=61585981945769"
+              className="text-black"
+            >
+              <Facebook className="h-6 w-6" fill="currentColor" />
             </a>
-            <a href="#" className="text-black">
-               <Linkedin className="h-6 w-6" fill="currentColor" />
+            <a
+              href="https://www.linkedin.com/company/interview-pro-career-personality-lab"
+              className="text-black"
+            >
+              <Linkedin className="h-6 w-6" fill="currentColor" />
             </a>
           </div>
         </div>

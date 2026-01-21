@@ -12,7 +12,7 @@ export default function Team() {
     {
       name: "Lahiru Sandeepa",
       role: "CEO & Co Founder @ Cenzios",
-      desc: "Ten years building products. Guides students through technical interviews with clarity.",
+      desc: " Specializes in entry-level hiring. Knows what recruiters look for in your first role.  ",
       image: "/team1.png",
       linkedin: "#",
       x: "#",
@@ -20,8 +20,8 @@ export default function Team() {
     },
     {
       name: "Ruwinda Tharaka",
-      role: "Solution Architect and Co founder @ cenzios",
-      desc: "Specializes in entry-level hiring. Knows what recruiters look for in your first role.",
+      role: "Solution Architect and Co founder @ Cenzios",
+      desc: "Ten years building products. Guides students through technical interviews with clarity.",
       image: "/team2.png",
       linkedin: "#",
       x: "#",
@@ -38,7 +38,10 @@ export default function Team() {
     },
   ];
 
-  const handleDragEnd = (event: MouseEvent | TouchEvent | PointerEvent, info: any) => {
+  const handleDragEnd = (
+    event: MouseEvent | TouchEvent | PointerEvent,
+    info: any,
+  ) => {
     const offset = info.offset.x;
     const velocity = info.velocity.x;
 
